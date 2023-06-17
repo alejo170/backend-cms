@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "lib": ["DOM", "ES2015"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "target": "ES2015",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strict": true,
+    "baseUrl": "./",
+    "outDir": "./build",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "pretty": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "plugins": [
+      { "transform": "typescript-transform-paths" },
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ],
+    "paths": {
+      "@bootstrap/*": ["src/bootstrap/*"],
+      "@configs/*": ["src/configs/*"],
+      "@auth/*": ["src/features/auth/*"],
+      "@course/*": ["src/features/course/*"],
+      "@student/*": ["src/features/student/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@decorators/*": ["src/shared/globals/decorators/*"],
+      "@helpers/*": ["src/shared/globals/helpers/*"],
+      "@services/*": ["src/shared/globals/services/*"],
+      "@root/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": [
+    "src/**/*.ts"
+  ]
+}

@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:5000
+@urlPath = api/v1
+
+### Create
+POST {{baseUrl}}/{{urlPath}}/addCourse
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+    "name": "fullstack mean",
+    "idStudents": [
+        "64792f801ea79a2b7e169719"
+    ] 
+}
+
+### Read
+GET {{baseUrl}}/{{urlPath}}/getCourses
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+### Update
+PUT {{baseUrl}}/{{urlPath}}/updateCourse?_id=648d3c2dfb5db2f82d4b4ff0
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+    "name": "fullstack mean 1",
+    "idStudents": [
+        "648d3c4bfb5db2f82d4b4ff3"
+    ]    
+}
+
+### Delete
+DELETE {{baseUrl}}/{{urlPath}}/deleteCourse?_id=648d2fbb1009a84f11cd2b1f
+Content-Type: application/json
+Accept: application/json
+withCredentials: true

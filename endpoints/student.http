@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:5000
+@urlPath = api/v1
+
+### Create
+POST {{baseUrl}}/{{urlPath}}/addStudent
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+    "firstname": "alejandro",
+    "lastname": "lopez",
+    "email":"alejo171@gmail.com",
+    "age": 30   
+}
+
+### Read
+GET {{baseUrl}}/{{urlPath}}/getStudents
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+### Update
+PUT {{baseUrl}}/{{urlPath}}/updateStudent?_id=64792f801ea79a2b7e169719
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+    "firstname": "alejandro",
+    "lastname": "lopez",
+    "email":"alejo170@gmail.com",
+    "age": 30
+}
+
+### Delete
+DELETE {{baseUrl}}/{{urlPath}}/deleteStudent?_id=647a697220bd04cf1126d85c
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
